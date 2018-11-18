@@ -13,18 +13,4 @@ const Keyboard = () => (
   <span>{alphabet}</span>
 )
 
-// const Keyboard = () => {
-//   alphabet_.map((letter,idx) => (
-//     <span key={idx}>{letter}</span>
-//     )
-//   )
-// }
-
-
-// {
-//   alphabet.map((l,idx) => (
-//     <span className="letter">{l}</span>
-//   ))
-// }
-
 export default Keyboard
