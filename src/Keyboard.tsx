@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { ClassType } from 'react';
 import { isArray } from 'util';
 
 const alphabet: string = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
@@ -9,7 +9,7 @@ console.log(isArray( alphabet_ ), alphabet_);
 
 interface IPropsKeyboard {
   // si ret num + string // onClick: (props:string, idx: number) => number | string,
-  onClick: (letter: string, idx: number) => void,
+  onClick: ( letter: string, idx: number ) => void,
 }
 
 const Keyboard = ({onClick}: IPropsKeyboard) => {
