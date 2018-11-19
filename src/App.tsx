@@ -20,10 +20,8 @@ class App extends Component {
     const idxIsClicked:number[] = this.state.idxIsClicked
     // add clicked letter to letters and setstate
     letters.push(letter)
-    console.log(typeof letters, typeof letter);
+    console.log(`typeof letters:${typeof letters }`, `typeof letter:${typeof letter} letters:${letters} idx: ${idx}`);
     this.setState({letters: letters})
-    console.log(letter, idx)
-    // return letter
   }
 
   render() {
