@@ -3,24 +3,24 @@ import Keyboard from './Keyboard';
 
 import './App.css';
 
-// function hello() {
-//   console.log('hello');
+// function handleKeyClick() {
+//   console.log('handleKeyClick');
 // }
 class App extends Component {
   constructor (props:any) {
     super(props)
-    this.hello = this.hello.bind(this)
+    this.handleKeyClick = this.handleKeyClick.bind(this)
   }
-  hello(letter:string, idx: number) {
-    // console.log('hello');
+  handleKeyClick(letter:string, idx: number) {
+    // console.log('handleKeyClick');
     console.log(letter, idx)
-    return letter
+    // return letter
   }
 
   render() {
     return (
       <div className="App">
-        <Keyboard onClick={this.hello} />
+        <Keyboard onClick={this.handleKeyClick} />
         {/* <Keyboard /> */}
       </div>
     );

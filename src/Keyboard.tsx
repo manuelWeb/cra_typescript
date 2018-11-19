@@ -8,8 +8,8 @@ const alphabet_: string[] = [...alphabet]
 console.log(isArray( alphabet_ ), alphabet_);
 
 interface IPropsKeyboard {
-  // onClick: () => void,
-  onClick: (props:string, idx: number) => number | string,
+  // si ret num + string // onClick: (props:string, idx: number) => number | string,
+  onClick: (letter: string, idx: number) => void,
 }
 
 const Keyboard = ({onClick}: IPropsKeyboard) => {
