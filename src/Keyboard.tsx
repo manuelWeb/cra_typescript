@@ -7,13 +7,18 @@ const alphabet_: string[] = [...alphabet]
 
 console.log(isArray( alphabet_ ), alphabet_);
 
-const Keyboard = () => {
+interface IPropsKeyboard {
+  // onClick: () => void,
+  onClick: (props:string, idx: number) => number | string,
+}
+
+const Keyboard = ({onClick}: IPropsKeyboard) => {
   const clavier: JSX.Element = (
     <div className="keyboard_container">
       {
         alphabet_.map( (letter,idx) =>
           (
-            <span key={idx}>{letter}</span>
+            <span key={idx} onClick={() => onClick(letter, idx)}>{letter}</span>
           )
         )
       }
