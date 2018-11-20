@@ -15,8 +15,9 @@ interface ITestProps {
   onClick: ( arg: any ) => void,
 }
 
-function test(arg?: any) {
-  console.log(arg);
+function test(this: any, secArg?: any) {
+  console.log(secArg);
+  console.log(this);
 }
 
 class App extends Component {
@@ -41,7 +42,7 @@ class App extends Component {
     return (
       <div className="App">
         <Keyboard onClick={this.handleKeyClick} />
-        <div onClick={() => test()}>Test</div>
+        <div onClick={ () => test([...this.state.letters]) }>Test</div>
         {/* <Keyboard /> */}
       </div>
     );
