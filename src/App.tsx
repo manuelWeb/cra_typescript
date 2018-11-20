@@ -11,13 +11,20 @@ import './App.css';
 //   console.log(`typeof letters:${typeof letters }`, `typeof letter:${typeof letter} letters:${letters} idx: ${idx}`);
 //   this.setState({letters: letters})
 // }
+interface ITestProps {
+  onClick: ( arg: any ) => void,
+}
+
+function test(arg?: any) {
+  console.log(arg);
+}
 
 class App extends Component {
   state = {
     letters: [],
     idxIsClicked: [],
   }
-  constructor (props:any) {
+  constructor (props:{}) {
     super(props)
     this.handleKeyClick = this.handleKeyClick.bind(this)
   }
@@ -34,6 +41,7 @@ class App extends Component {
     return (
       <div className="App">
         <Keyboard onClick={this.handleKeyClick} />
+        <div onClick={() => test()}>Test</div>
         {/* <Keyboard /> */}
       </div>
     );
