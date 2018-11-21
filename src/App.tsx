@@ -42,7 +42,7 @@ class App extends Component {
     return (
       <div className="App">
         <Keyboard onClick={this.handleKeyClick} />
-        <div onClick={ () => test([...this.state.letters]) }>Test</div>
+        <div onClick={ () => test(this) }>Test</div>
         {/* <Keyboard /> */}
       </div>
     );
